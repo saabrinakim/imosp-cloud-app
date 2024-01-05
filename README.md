@@ -12,6 +12,10 @@ Imosp Cloud App - React native expo project
    ```sh
    yarn install
    ```
+   or
+   ```sh
+   npm i
+   ```
 3. Run app
    ```sh
    npx expo start
