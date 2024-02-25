@@ -11,7 +11,7 @@ function Home(props: Props) {
     <SafeAreaView style={styles.container}>
       <Text variant="displayMedium">Home</Text>
       <Text onPress={() => props.navigation.push("About")}>
-        Click me to go to About page hello
+        Click me to go to About page hello flavio lindo
       </Text>
     </SafeAreaView>
   );
