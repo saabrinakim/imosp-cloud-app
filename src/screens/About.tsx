@@ -9,7 +9,7 @@ type Props = {
 function About(props: Props) {
   return (
     <SafeAreaView style={styles.container}>
-      <Text variant="displayMedium">About</Text>
+      <Text variant="displayMedium">About the App</Text>
       <Text onPress={() => props.navigation.goBack()}>Click me to go back</Text>
     </SafeAreaView>
   );
