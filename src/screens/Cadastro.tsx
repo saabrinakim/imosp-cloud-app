@@ -11,9 +11,7 @@ type Props = {
     return(
         <SafeAreaView style={styles.container}>
             <Text variant="displayMedium">Cadastro</Text>
-            <Text onPress={() => props.navigation.push("About")}>
-                Click here to go back to about
-            </Text>
+            <Text onPress={() => props.navigation.push("About")}> Click me to go back </Text>
         </SafeAreaView> 
     );  
  }
