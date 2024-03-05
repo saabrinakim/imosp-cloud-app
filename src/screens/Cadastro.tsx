@@ -1,7 +1,6 @@
 import React from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
-import About from "./About";
 
 type Props = {
     navigation: any;
@@ -11,7 +10,7 @@ type Props = {
     return(
         <SafeAreaView style={styles.container}>
             <Text variant="displayMedium">Cadastro</Text>
-            <Text onPress={() => props.navigation.push("About")}> Click me to go back </Text>
+            <Text onPress={() => props.navigation.goBack()}> Click me to go back </Text>
         </SafeAreaView> 
     );  
  }
@@ -24,4 +23,4 @@ type Props = {
 
  });
  
- export default About;
+ export default Cadastro;

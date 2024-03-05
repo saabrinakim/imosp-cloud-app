@@ -10,7 +10,7 @@ function About(props: Props) {
   return (
     <SafeAreaView style={styles.container}>
       <Text variant="displayMedium">About</Text>
-      <Text onPress={() => props.navigation.goBack()}>Click me to go back</Text>
+      <Text onPress={() => props.navigation.push("Home")}>Click me to go back</Text>
       
       <Text onPress={() => props.navigation.push("Cadastro")}>Click me to go to Cadastro page</Text>
       
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 24,
-    marginVertical: 20,
+    lineHeight: 40,
   },
 });
 
