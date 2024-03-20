@@ -17,6 +17,9 @@ function About(props: Props) {
       <Text onPress={() => props.navigation.push("Cadastro")}>
         Click me to go to Cadastro page
       </Text>
+      <Text onPress={() => props.navigation.push("Login")}>
+        Click me to go to Login page
+      </Text>
     </SafeAreaView>
   );
 }
