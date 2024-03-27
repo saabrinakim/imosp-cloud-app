@@ -1,6 +1,6 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, } from "react-native";
-import { Text, TextInput } from "react-native-paper";
+import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, Text, TextInput, KeyboardAvoidingView, Keyboard } from "react-native";
+
 
 type Props = {
     navigation: any;
@@ -9,9 +9,8 @@ type Props = {
  function Cadastro(props: Props) {
     const {text, onChangeText} = React.useState("")
     return(
-        <SafeAreaView style={styles.container}>
-            <Text onPress={() => props.navigation.goBack()}> back </Text>
 
+        <View style={styles.container}>
             <Text style={styles.comando}>Informe seus dados para prosseguir</Text>
 
             <Text style={styles.titulo}>Digite seu nome completo</Text>
@@ -22,11 +21,19 @@ type Props = {
             value={text}
             ></TextInput>
 
+        <View style={styles.row}>
             <TextInput style={styles.inputP} 
-            placeholder="telefone"
+            placeholder="ddd"
             onChangeText={onChangeText} 
             value={text}
             ></TextInput>
+            
+            <TextInput style={styles.inputM} 
+            placeholder="9-"
+            onChangeText={onChangeText} 
+            value={text}
+            ></TextInput>
+        </View>
 
             <TextInput style={styles.input}
              placeholder="email"
@@ -49,7 +56,7 @@ type Props = {
             <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Cadastrar</Text>
             </TouchableOpacity>
-        </SafeAreaView> 
+        </View> 
     );  
  }
  
@@ -71,7 +78,7 @@ type Props = {
         display: 'flex',
         alignSelf: 'center',
         width: 338,
-        height: 30,
+        height: 44,
         top: 110,
         marginTop: 20,
         borderRadius: 2,
@@ -81,15 +88,26 @@ type Props = {
     },
     inputP: {
         display: 'flex',
-        alignSelf: 'center',
-        width: 212.38,
-        height: 30,
+        left: 26,
+        width: 46.99,
+        height: 44,
         top: 110,
         marginTop: 20,
         borderRadius: 2,
         padding: 10,
         borderWidth: 2,
         
+    },
+    inputM: {
+        display: 'flex',
+        width: 212.38,
+        height: 44,
+        top: 110,
+        left: 40,
+        marginTop: 20,
+        borderRadius: 2,
+        padding: 10,
+        borderWidth: 2,
     },
     titulo: {
         width: 197,
@@ -114,7 +132,11 @@ type Props = {
         textAlign: 'center',
         top: 11,
 
-    }
+    },
+
+    row: {
+        flexDirection: 'row'
+    },
 
  });
  
