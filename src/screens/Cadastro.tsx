@@ -1,6 +1,7 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, Text, TextInput, KeyboardAvoidingView, Keyboard } from "react-native";
-
+import Checkbox from 'expo-checkbox';
+import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, Keyboard,} from "react-native";
+import { Text } from "react-native-paper";
 
 type Props = {
     navigation: any;
@@ -9,7 +10,7 @@ type Props = {
  function Cadastro(props: Props) {
     const {text, onChangeText} = React.useState("")
     return(
-
+        
         <View style={styles.container}>
             <Text style={styles.comando}>Informe seus dados para prosseguir</Text>
 
@@ -72,7 +73,7 @@ type Props = {
         top: 80,
         left: 61,
         fontSize: 22,
-        lineHeight: 27,
+        lineHeight: 26.63,
     },
     input: {
         display: 'flex',
