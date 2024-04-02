@@ -1,7 +1,10 @@
 import React from "react";
-import Checkbox from 'expo-checkbox';
 import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, Keyboard,} from "react-native";
 import { Text } from "react-native-paper";
+import Checkbox from "expo-checkbox";
+
+
+
 
 type Props = {
     navigation: any;
@@ -9,6 +12,7 @@ type Props = {
 
  function Cadastro(props: Props) {
     const {text, onChangeText} = React.useState("")
+    const [isChecked, setChecked] = React.useState(false);
     return(
         
         <View style={styles.container}>
@@ -53,6 +57,17 @@ type Props = {
              onChangeText={onChangeText} 
              value={text}
             ></TextInput>
+        <View style={styles.row}>
+            <Checkbox
+            style={styles.checkbox}
+            value={isChecked}
+            onValueChange={setChecked}
+            />
+
+            <Text style={styles.tituloP}>Aceito os <Text style={styles.underline}>
+                termos de privacidade.</Text> 
+            </Text>
+        </View>
 
             <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Cadastrar</Text>
@@ -125,6 +140,7 @@ type Props = {
         left: 26,
         backgroundColor: '#F4B325',
         alignItems: 'center',
+        borderRadius: 7,
         
     },
     buttonText: {
@@ -139,6 +155,27 @@ type Props = {
         flexDirection: 'row'
     },
 
- });
+    checkbox: {
+        width: 32,
+        height: 32,
+        top: 130,
+        left: 26,
+    
+    },
+
+    tituloP: {
+        width: 249,
+        alignItems: 'center',
+        alignSelf: 'center',
+        fontSize: 16, 
+        left: 37,
+        top: 130, 
+        lineHeight: 19.36 
+    },
+    
+    underline: {
+        textDecorationLine: 'underline',
+      },
+});
  
  export default Cadastro;
