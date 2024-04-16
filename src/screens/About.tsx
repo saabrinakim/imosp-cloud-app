@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import { Text } from "react-native-paper";
 
 type Props = {
@@ -16,6 +16,10 @@ function About(props: Props) {
       
       <Text onPress={() => props.navigation.push("Login")}>
         Click me to go to Login page
+      </Text>
+
+      <Text onPress={() => props.navigation.push("Redefine")}>
+        Click me to go to Redefine page
       </Text>
     </SafeAreaView>
   );
