@@ -1,12 +1,16 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View, Image, TouchableOpacity, TextInput, KeyboardAvoidingView, Keyboard,} from "react-native";
-import { Text } from "react-native-paper";
+import { Button, Text } from "react-native-paper";
 
 type Props = {
   navigation: any;
 };
 
 function Redefine(props: Props) {
+
+  const {text, onChangeText} = React.useState("")
+  const [isChecked, setChecked] = React.useState(false);
+ 
   return (
     <View style={styles.container}>
       <Text style={styles.comando}>Digite o código de verificação</Text>
@@ -19,6 +23,16 @@ function Redefine(props: Props) {
       <TextInput style={styles.inputP}></TextInput>
       <TextInput style={styles.inputP}></TextInput>
       </View>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Validar código</Text>
+      </TouchableOpacity>
+      
+      <Button style={styles.buttonCinza}>
+        <Text style={styles.buttonText}>Reenviar código (49s) </Text>
+      </Button>
+
+      <Text style={styles.linkbutton}>Ainda não recebeu o código?</Text>
     </View>
   );
 }
@@ -59,7 +73,42 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
-  }
+  },
+  button: {
+    width: 337,
+    height: 44,
+    top: 160,
+    left: 26,
+    backgroundColor: '#F4B325',
+    alignItems: 'center',
+    borderRadius: 7,
+    marginBottom: 20,
+  },
+  buttonCinza: {
+    width: 337,
+    height: 44,
+    top: 160,
+    left: 26,
+    backgroundColor: '#D9D9D9',
+    alignItems: 'center',
+    borderRadius: 7,
+    opacity: '50%',
+  },
+  buttonText: {
+    width: 197,
+    fontSize: 16, 
+    textAlign: 'center',
+    top: 11,
+  },
+  linkbutton: {
+    width: 240,
+    top: 200,
+    left: 74,
+    alignItems: 'center',
+    textAlign: 'center',
+    fontSize: 16,
+    color: '#1A73E8'
+  },
 });
 
 export default Redefine;
