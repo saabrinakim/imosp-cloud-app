@@ -6,7 +6,7 @@ type Props = {
   navigation: any;
 };
 
-function Redefine(props: Props) {
+function Confirma(props: Props) {
 
   const {text, onChangeText} = React.useState("")
   const [isChecked, setChecked] = React.useState(false);
@@ -110,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Redefine;
+export default Confirma;

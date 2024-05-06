@@ -17,6 +17,11 @@ function About(props: Props) {
       <Text onPress={() => props.navigation.push("Redefine")}>
         Click me to go to Redefine page
       </Text>
+
+      <Text onPress={() => props.navigation.push("Confirma")}>
+        Click me to go to Confirma page
+      </Text>
+   
     </SafeAreaView>
   );
 }
