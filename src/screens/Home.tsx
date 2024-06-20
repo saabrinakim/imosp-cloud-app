@@ -7,13 +7,26 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
+  Linking,
 } from "react-native";
+import EvilIcons from "@expo/vector-icons/EvilIcons";
+import { SimpleLineIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 type Props = {
   navigation: any;
 };
 
 function Home(props: Props) {
+  const handleYoutubeButton = () => {
+    Linking.openURL("https://www.youtube.com/@imosp/streams");
+  };
+
+  const handleHistoryButton = () => {
+    props.navigation.push("About");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Image
@@ -57,22 +70,53 @@ function Home(props: Props) {
           </TouchableOpacity>
         </ScrollView>
       </View>
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.menuText}>Estamos ao vivo (assista)</Text>
+      <TouchableOpacity style={styles.row} onPress={handleYoutubeButton}>
+        <Image
+          source={require("../../assets/youtube.png")}
+          style={styles.youtubeIcon}
+        />
+        <Text style={styles.youtubeText}>Estamos ao vivo (assista)</Text>
       </TouchableOpacity>
       <View style={styles.menuContainer}>
         <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Cultos</Text>
+          <MaterialCommunityIcons
+            name="hand-extended-outline"
+            size={42}
+            color="black"
+          />
+          <Text style={styles.menuText}>Ministérios</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.menuItem}>
+          <EvilIcons
+            name="calendar"
+            size={56}
+            color="black"
+            style={styles.icon}
+          />
           <Text style={styles.menuText}>Eventos</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.menuContainer}>
         <TouchableOpacity style={styles.menuItem}>
-          <Text style={styles.menuText}>Ministérios</Text>
+          <FontAwesome5
+            name="church"
+            size={36}
+            color="black"
+            style={{
+              marginBottom: 8,
+            }}
+          />
+          <Text style={styles.menuText}>Cultos</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={handleHistoryButton}>
+          <SimpleLineIcons
+            name="book-open"
+            size={42}
+            color="black"
+            style={{
+              marginBottom: 8,
+            }}
+          />
           <Text style={styles.menuText}>História da IMOSP</Text>
         </TouchableOpacity>
       </View>
@@ -84,9 +128,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    backgroundColor: "#F6F6F6",
   },
   logo: {
-    marginVertical: 20,
+    marginTop: 20,
+    marginBottom: 12,
     width: 60,
     height: 54,
     alignSelf: "center",
@@ -155,7 +201,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   menuItem: {
-    backgroundColor: "lightgrey",
+    backgroundColor: "#EEE",
     borderRadius: 8,
     marginBottom: 10,
     alignItems: "center",
@@ -164,16 +210,32 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
   menuText: {
-    color: "grey",
+    color: "#F4B325",
     fontSize: 16,
+    fontWeight: "600",
+  },
+  youtubeText: {
+    color: "#141414",
+    fontSize: 16,
+    fontWeight: "600",
   },
   row: {
-    backgroundColor: "lightgrey",
-    padding: 20,
+    backgroundColor: "#EEE",
+    padding: 16,
     borderRadius: 8,
     marginBottom: 10,
     alignItems: "center",
     marginHorizontal: 24,
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  youtubeIcon: {
+    width: 30,
+    height: 30,
+    marginRight: 12,
+  },
+  icon: {
+    marginBottom: 4,
   },
 });
 
