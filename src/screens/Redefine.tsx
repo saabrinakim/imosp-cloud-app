@@ -18,10 +18,10 @@ function Redefine(props: Props) {
       <Text style ={styles.info}> O código de verificação foi enviado para somelongusername@email.com</Text>
       
       <View style={styles.row}>
-      <TextInput style={styles.inputP}></TextInput>
-      <TextInput style={styles.inputP}></TextInput>
-      <TextInput style={styles.inputP}></TextInput>
-      <TextInput style={styles.inputP}></TextInput>
+      <TextInput style={styles.inputP} inputMode="numeric"></TextInput>
+      <TextInput style={styles.inputP} inputMode="numeric"></TextInput>
+      <TextInput style={styles.inputP} inputMode="numeric"></TextInput>
+      <TextInput style={styles.inputP} inputMode="numeric"></TextInput>
       </View>
 
       <TouchableOpacity style={styles.button}>
