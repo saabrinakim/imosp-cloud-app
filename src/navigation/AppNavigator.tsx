@@ -6,6 +6,9 @@ import About from "../screens/About";
 import Cadastro from "../screens/Cadastro";
 import Login from "../screens/Login";
 import Onboarding from "../screens/Onboarding";
+import Ministries from "../screens/Ministries";
+import Events from "../screens/Events";
+import Service from "../screens/Service";
 
 const AppStack = createStackNavigator();
 
@@ -22,6 +25,9 @@ function AppNavigator() {
       <AppStack.Screen name="About" component={About} />
       <AppStack.Screen name="Cadastro" component={Cadastro} />
       <AppStack.Screen name="Login" component={Login} />
+      <AppStack.Screen name="Ministries" component={Ministries} />
+      <AppStack.Screen name="Events" component={Events} />
+      <AppStack.Screen name="Service" component={Service} />
     </AppStack.Navigator>
   );
 }

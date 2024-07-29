@@ -27,107 +27,132 @@ function Home(props: Props) {
     props.navigation.push("About");
   };
 
+  const handleMinistriesButton = () => {
+    props.navigation.push("Ministries");
+  };
+
+  const handleEventsButton = () => {
+    props.navigation.push("Events");
+  };
+
+  const handleServiceButton = () => {
+    props.navigation.push("Service");
+  };
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        source={require("../../assets/imosplogoprovisorio.png")}
-        resizeMode="cover"
-        style={styles.logo}
-      />
-      <View style={{ height: 240 }}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <TouchableOpacity style={styles.retiroContainerFirst}>
-            <Image
-              source={require("../../assets/background.png")}
-              style={styles.retiroImage}
-            />
-            <Text style={styles.retiroText}>
-              Inscrições abertas{"\n"}para o Retiro
-            </Text>
-            <Text style={styles.retiroSubtitle}>
-              O Tabernáculo e a{"\n"}Espiritualidade Cristã
-            </Text>
-            <View style={styles.dateContainer}>
-              <Text style={styles.dateText}>22/04</Text>
-              <Text style={styles.dateWeekText}> QUA</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.retiroContainer}>
-            <Image
-              source={require("../../assets/background.png")}
-              style={styles.retiroImage}
-            />
-            <Text style={styles.retiroText}>
-              Inscrições abertas{"\n"}para o Retiro
-            </Text>
-            <Text style={styles.retiroSubtitle}>
-              O Tabernáculo e a{"\n"}Espiritualidade Cristã
-            </Text>
-            <View style={styles.dateContainer}>
-              <Text style={styles.dateText}>22/04</Text>
-              <Text style={styles.dateWeekText}> QUA</Text>
-            </View>
-          </TouchableOpacity>
-        </ScrollView>
-      </View>
-      <TouchableOpacity style={styles.row} onPress={handleYoutubeButton}>
+    <ScrollView style={styles.container}>
+      <SafeAreaView>
         <Image
-          source={require("../../assets/youtube.png")}
-          style={styles.youtubeIcon}
+          source={require("../../assets/imosplogoprovisorio.png")}
+          resizeMode="cover"
+          style={styles.logo}
         />
-        <Text style={styles.youtubeText}>Estamos ao vivo (assista)</Text>
-      </TouchableOpacity>
-      <View style={styles.menuContainer}>
-        <TouchableOpacity style={styles.menuItem}>
-          <MaterialCommunityIcons
-            name="hand-extended-outline"
-            size={42}
-            color="black"
+        <View style={{ height: 240 }}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <TouchableOpacity style={styles.retiroContainerFirst}>
+              <Image
+                source={require("../../assets/background.png")}
+                style={styles.retiroImage}
+              />
+              <Text style={styles.retiroText}>
+                Inscrições abertas{"\n"}para o Retiro
+              </Text>
+              <Text style={styles.retiroSubtitle}>
+                O Tabernáculo e a{"\n"}Espiritualidade Cristã
+              </Text>
+              <View style={styles.dateContainer}>
+                <Text style={styles.dateText}>22/04</Text>
+                <Text style={styles.dateWeekText}> QUA</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.retiroContainer}>
+              <Image
+                source={require("../../assets/background.png")}
+                style={styles.retiroImage}
+              />
+              <Text style={styles.retiroText}>
+                Inscrições abertas{"\n"}para o Retiro
+              </Text>
+              <Text style={styles.retiroSubtitle}>
+                O Tabernáculo e a{"\n"}Espiritualidade Cristã
+              </Text>
+              <View style={styles.dateContainer}>
+                <Text style={styles.dateText}>22/04</Text>
+                <Text style={styles.dateWeekText}> QUA</Text>
+              </View>
+            </TouchableOpacity>
+          </ScrollView>
+        </View>
+        <TouchableOpacity style={styles.row} onPress={handleYoutubeButton}>
+          <Image
+            source={require("../../assets/youtube.png")}
+            style={styles.youtubeIcon}
           />
-          <Text style={styles.menuText}>Ministérios</Text>
+          <Text style={styles.youtubeText}>Estamos ao vivo (assista)</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
-          <EvilIcons
-            name="calendar"
-            size={56}
-            color="black"
-            style={styles.icon}
-          />
-          <Text style={styles.menuText}>Eventos</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.menuContainer}>
-        <TouchableOpacity style={styles.menuItem}>
-          <FontAwesome5
-            name="church"
-            size={36}
-            color="black"
-            style={{
-              marginBottom: 8,
-            }}
-          />
-          <Text style={styles.menuText}>Cultos</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem} onPress={handleHistoryButton}>
-          <SimpleLineIcons
-            name="book-open"
-            size={42}
-            color="black"
-            style={{
-              marginBottom: 8,
-            }}
-          />
-          <Text style={styles.menuText}>História da IMOSP</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+        <View style={styles.menuContainer}>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={handleMinistriesButton}
+          >
+            <MaterialCommunityIcons
+              name="hand-extended-outline"
+              size={42}
+              color="black"
+            />
+            <Text style={styles.menuText}>Ministérios</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={handleEventsButton}
+          >
+            <EvilIcons
+              name="calendar"
+              size={42}
+              color="black"
+              style={styles.icon}
+            />
+            <Text style={styles.menuText}>Eventos</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.menuContainer}>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={handleServiceButton}
+          >
+            <FontAwesome5
+              name="church"
+              size={42}
+              color="black"
+              style={{
+                marginBottom: 8,
+              }}
+            />
+            <Text style={styles.menuText}>Cultos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.menuItem}
+            onPress={handleHistoryButton}
+          >
+            <SimpleLineIcons
+              name="book-open"
+              size={42}
+              color="black"
+              style={{
+                marginBottom: 8,
+              }}
+            />
+            <Text style={styles.menuText}>História da IMOSP</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     backgroundColor: "#F6F6F6",
   },
   logo: {
@@ -194,25 +219,26 @@ const styles = StyleSheet.create({
     marginLeft: -3,
   },
   menuContainer: {
-    flex: 1,
+    flexDirection: "row",
     justifyContent: "space-between",
     marginHorizontal: 24,
-    flexDirection: "row",
     marginTop: 12,
   },
   menuItem: {
     backgroundColor: "#EEE",
     borderRadius: 8,
-    marginBottom: 10,
-    alignItems: "center",
+    width: "48%", // Adjust the width as needed
     aspectRatio: 1,
-    justifyContent: "flex-end",
-    paddingBottom: 16,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 10,
   },
   menuText: {
     color: "#F4B325",
-    fontSize: 16,
+    fontSize: 14, // Adjust the font size as needed
     fontWeight: "600",
+    marginTop: 8,
+    textAlign: "center",
   },
   youtubeText: {
     color: "#141414",

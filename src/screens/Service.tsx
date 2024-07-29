@@ -6,12 +6,12 @@ type Props = {
   navigation: any;
 };
 
-function About(props: Props) {
+function Service(props: Props) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
         <BackButton navigation={props.navigation} styles={styles.backButton} />
-        <Text style={styles.title}>História da IMOSP</Text>
+        <Text style={styles.title}>Cultos</Text>
       </View>
     </SafeAreaView>
   );
@@ -41,4 +41,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default About;
+export default Service;
