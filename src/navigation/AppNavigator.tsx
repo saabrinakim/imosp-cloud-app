@@ -4,18 +4,11 @@ import React from "react";
 import Home from "../screens/Home";
 import About from "../screens/About";
 import Cadastro from "../screens/Cadastro";
-<<<<<<< HEAD
-import Redefine from "../screens/Redefine";
-import Confirma from "../screens/Confirma";
-
-
-=======
 import Login from "../screens/Login";
 import Onboarding from "../screens/Onboarding";
 import Ministries from "../screens/Ministries";
 import Events from "../screens/Events";
 import Service from "../screens/Service";
->>>>>>> 656043f8327747f230c626b2bd2000b86ba4cdb1
 
 const AppStack = createStackNavigator();
 
@@ -31,15 +24,10 @@ function AppNavigator() {
       <AppStack.Screen name="Home" component={Home} />
       <AppStack.Screen name="About" component={About} />
       <AppStack.Screen name="Cadastro" component={Cadastro} />
-<<<<<<< HEAD
-      <AppStack.Screen name="Redefine" component={Redefine} />
-      <AppStack.Screen name="Confirma" component={Confirma} />
-=======
       <AppStack.Screen name="Login" component={Login} />
       <AppStack.Screen name="Ministries" component={Ministries} />
       <AppStack.Screen name="Events" component={Events} />
       <AppStack.Screen name="Service" component={Service} />
->>>>>>> 656043f8327747f230c626b2bd2000b86ba4cdb1
     </AppStack.Navigator>
   );
 }
