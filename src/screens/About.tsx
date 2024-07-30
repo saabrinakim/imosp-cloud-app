@@ -21,6 +21,10 @@ function About(props: Props) {
       <Text onPress={() => props.navigation.push("Confirmacao")}>
         Click me to go to Confirmacao page
       </Text>
+
+      <Text onPress={() => props.navigation.push("Culto")}>
+        Click me to go to Culto page
+      </Text>
    
     </SafeAreaView>
   );
