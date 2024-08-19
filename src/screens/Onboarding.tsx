@@ -6,6 +6,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   Linking,
+  View,
 } from "react-native";
 import { Text } from "react-native-paper";
 
@@ -40,49 +41,73 @@ const Onboarding = (props: Props) => {
       keyboardVerticalOffset={Platform.OS === "ios" ? 100 : 0}
       style={styles.container}
     >
-      <Image
-        source={require("../../assets/imosplogoprovisorio.png")}
-        style={styles.logo}
-        resizeMode="cover"
-      />
-      <Text
+      <View
         style={{
-          fontSize: 26,
-          fontWeight: "bold",
-          marginBottom: 20,
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        IMOSP cloud
-      </Text>
-
-      <TouchableOpacity
-        style={styles.googleButton}
-        onPress={onClickGoogleLogin}
-      >
         <Image
-          style={styles.googleLogo}
-          source={require("../../assets/google.png")}
+          source={require("../../assets/imosp_onboarding.png")}
+          style={styles.logo}
+          resizeMode="cover"
         />
-        <Text style={styles.textGoogle}>Continuar com Google</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.googleButton} onPress={onClickAppleLogin}>
-        <Image
-          style={styles.appleLogo}
-          source={require("../../assets/apple.png")}
-        />
-        <Text style={styles.textGoogle}>Continuar com a Apple</Text>
-      </TouchableOpacity>
-
-      <Text style={styles.termsText}>
-        Ao fazer login, você concorda com os nossos{" "}
-        <Text style={styles.boldUnderlineText} onPress={onClickTerms}>
-          Termos
-        </Text>{" "}
-        e{" "}
-        <Text style={styles.boldUnderlineText} onPress={onClickPolicy}>
-          Política de Privacidade
+        <Text
+          style={{
+            fontSize: 26,
+            fontWeight: "bold",
+            marginBottom: 20,
+          }}
+        >
+          IMOSP
         </Text>
+      </View>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 16,
+            marginBottom: 18,
+            color: "#1D2939",
+          }}
+        >
+          Selecione uma das opções para acessar:
+        </Text>
+
+        <TouchableOpacity
+          style={styles.googleButton}
+          onPress={onClickGoogleLogin}
+        >
+          <Image
+            style={styles.googleLogo}
+            source={require("../../assets/google.png")}
+          />
+          <Text style={styles.textGoogle}>Continuar com Google</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.appleButton}
+          onPress={onClickAppleLogin}
+        >
+          <Image
+            style={styles.appleLogo}
+            source={require("../../assets/apple.png")}
+          />
+          <Text style={styles.textApple}>Continuar com a Apple</Text>
+        </TouchableOpacity>
+      </View>
+      <Text
+        style={{
+          color: "#9B9B9B",
+          fontSize: 12,
+          alignSelf: "center",
+        }}
+      >
+        v0.01
       </Text>
     </KeyboardAvoidingView>
   );
@@ -91,14 +116,14 @@ const Onboarding = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "space-around",
     backgroundColor: "white",
   },
   logo: {
+    marginTop: 50,
     marginBottom: 20,
-    width: "50%",
-    height: "20%",
+    width: 186,
+    height: 89,
   },
   button: {
     marginTop: 12,
@@ -111,17 +136,28 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
   },
   googleButton: {
-    marginTop: 12,
+    marginTop: 8,
     backgroundColor: "#FFF",
-    width: "80%",
+    width: "85%",
     alignItems: "center",
-    borderRadius: 7,
+    borderRadius: 8,
     paddingVertical: 12,
     justifyContent: "center",
-    marginHorizontal: 24,
     flexDirection: "row",
     borderWidth: 1,
-    borderColor: "#141414",
+    borderColor: "#D0D5DD",
+  },
+  appleButton: {
+    marginTop: 12,
+    backgroundColor: "#000",
+    width: "85%",
+    alignItems: "center",
+    borderRadius: 8,
+    paddingVertical: 12,
+    justifyContent: "center",
+    flexDirection: "row",
+    borderWidth: 1,
+    borderColor: "#D0D5DD",
   },
   input: {
     marginTop: 9,
@@ -151,16 +187,22 @@ const styles = StyleSheet.create({
   textGoogle: {
     fontSize: 15,
     color: "#141414",
-    marginHorizontal: 8,
-    fontWeight: "400",
+    fontWeight: "600",
+  },
+  textApple: {
+    fontSize: 16,
+    color: "#FFF",
+    fontWeight: "600",
   },
   googleLogo: {
     width: 18,
     height: 18,
+    marginRight: 8,
   },
   appleLogo: {
     width: 20,
     height: 20,
+    marginRight: 8,
   },
   termsText: {
     fontSize: 12,
