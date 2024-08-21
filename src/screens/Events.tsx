@@ -19,7 +19,9 @@ function Events(props: Props) {
       </View>
 
       <View style={{width: 213, height: 32, marginTop: 16, marginBottom: 16}}>
-        <TouchableOpacity style={styles.cultoButton}>
+        <TouchableOpacity style={styles.cultosButton}>
+          
+          <Text>Cultos</Text>
 
         </TouchableOpacity>
 
@@ -298,9 +300,21 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 8,
   },
-  cultoButton: {
+  cultosButton: {
+    width: 92,
+    height: 32,
+    borderColor: '#344054',
+    color: '#FFFFFF',
+    borderRadius: 8,
+    borderWidth: 1,
+  },
+  eventosButton: {
 
+  },
+  smallButtonText: {
+    
   }
+
 
 });
 
