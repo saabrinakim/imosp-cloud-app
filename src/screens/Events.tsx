@@ -54,6 +54,10 @@ function Events(props: Props) {
 
               <Image style={styles.image} source={require('../../assets/retirotabernaculo.png')}/>
 
+              <View style={styles.tagMint}>
+                <Text style={styles.tagText}>Retiro</Text>
+              </View>
+
               <View style={{marginLeft: 4}}>
               <Text style={styles.eventTitle}>O Tabernáculo e a Espiritualidade Cristã</Text>
               <Text style={styles.description}>Inscrições abertas até o dia 20/04</Text>
@@ -117,6 +121,10 @@ function Events(props: Props) {
 
               <Image style={styles.image} source={require('../../assets/oracaomadrugada.png')}/>
 
+              <View style={styles.tagPurple}>
+                <Text style={styles.tagText}>Oração da madrugada</Text>
+              </View>
+
               <View style={{marginLeft: 4}}>
               <Text style={styles.eventTitle}>Reunião de oração da madrugada</Text>
               <Text style={styles.description}>Todos os dias às 3h.</Text>
@@ -165,8 +173,11 @@ function Events(props: Props) {
           <View style={{width: 304, height: 89,  marginLeft:8, alignItems: "center", justifyContent: "center"}}>
             <View style={{flexDirection: "row"}}>
 
-              <Image style={styles.image} source={require('../../assets/encontrodeoracaosemanal.png')}
-              />
+              <Image style={styles.image} source={require('../../assets/encontrodeoracaosemanal.png')}/>
+
+              <View style={styles.tagCyan}>
+                <Text style={styles.tagText}>Oração</Text>
+              </View>
 
               <View style={{marginLeft: 4}}>
               <Text style={styles.eventTitle}>Encontro de oração semanal do ministério...</Text>
@@ -334,7 +345,55 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#FFFFFF',
     marginLeft: 6 
+  },
+  tagMint: {
+    position: "absolute",
+    backgroundColor: "#00C7BE",
+    width: 37,
+    height: 17,
+    marginHorizontal: 4,
+    marginVertical: 2,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: "center"
+
+  },
+
+  tagPurple: {
+    position: "absolute",
+    backgroundColor: "#AF52DE",
+    width: 75,
+    height: 28,
+    marginHorizontal: 4,
+    marginVertical: 2,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: "center"
+
+  },
+
+  tagCyan: {
+    position: "absolute",
+    backgroundColor: "#32ADE6",
+    width: 44,
+    height: 17,
+    marginHorizontal: 4,
+    marginVertical: 2,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: "center",
+
+  },
+
+  tagText:{
+    fontSize: 10,
+    fontWeight: '500',
+    color: '#FFFFFF',
+    lineHeight: 12,
+    textAlign: "center",
+
   }
+
 
 
 });
