@@ -15,17 +15,22 @@ function Events(props: Props) {
 
       <View style={styles.header}>
         <BackButton navigation={props.navigation} styles={styles.backButton} />
-        <Text style={styles.title}>Eventos</Text>
+        <Text style={styles.title}>Home</Text>
       </View>
 
-      <View style={{width: 213, height: 32, marginTop: 16, marginBottom: 16}}>
+      <View style={{width: 213, height: 32, marginTop: 16, marginBottom: 16, flexDirection: "row"}}>
         <TouchableOpacity style={styles.cultosButton}>
           
-          <Text>Cultos</Text>
+          <Text style={styles.smallButtonText}>Cultos</Text>
 
         </TouchableOpacity>
 
-        <TouchableOpacity>
+
+        <TouchableOpacity style={styles.eventosButton}>
+
+          <Feather name="check" size={14} color="white" />
+
+          <Text style={styles.smallButtonText2}>Eventos</Text>
 
         </TouchableOpacity>
 
@@ -47,8 +52,7 @@ function Events(props: Props) {
           <View style={{width: 304, height: 89, marginLeft: 8, alignItems: "center", justifyContent: "center" }}>
             <View style={{flexDirection: "row"}}>
 
-              <Image style={styles.image} source={require('../../assets/retirotabernaculo.png')}
-              />
+              <Image style={styles.image} source={require('../../assets/retirotabernaculo.png')}/>
 
               <View style={{marginLeft: 4}}>
               <Text style={styles.eventTitle}>O Tabernáculo e a Espiritualidade Cristã</Text>
@@ -219,20 +223,20 @@ const styles = StyleSheet.create({
     lineHeight: 40,
   },
   title: {
-    fontWeight: "600",
-    fontSize: 18,
+    fontWeight: "500",
+    fontSize: 16,
     textAlign: "center",
-    marginTop: 27,
+    marginTop: 40,
     alignSelf: "center",
   },
   backButton: {
-    marginTop: 24,
-    position: "absolute",
-    left: 0,
+    marginTop: 40,
+    
+    
   },
   header: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   eventTitle: {
     fontSize:  16,
@@ -301,18 +305,35 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   cultosButton: {
-    width: 92,
+    width: 94,
     height: 32,
     borderColor: '#344054',
-    color: '#FFFFFF',
+    backgroundColor: '#FFFFFF',
     borderRadius: 8,
     borderWidth: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 16,
   },
   eventosButton: {
-
+    width: 103,
+    height: 32,
+    backgroundColor: '#101828',
+    borderRadius: 8,
+    borderWidth: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    marginLeft:  16,
   },
   smallButtonText: {
-    
+    fontSize: 14, 
+    color: '#344054',
+  },
+  smallButtonText2: {
+    fontSize: 14,
+    color: '#FFFFFF',
+    marginLeft: 6 
   }
 
 
