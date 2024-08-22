@@ -255,7 +255,8 @@ const styles = StyleSheet.create({
     width: 203,
     height: 39,
     letterSpacing: 0.5,
-    color: '#333333'
+    color: '#333333',
+    fontWeight: '500'
   },
   description: {
     fontSize: 14,
@@ -263,7 +264,8 @@ const styles = StyleSheet.create({
     width: 203,
     height: 34,
     letterSpacing: 0.5,
-    color: '#757575'
+    color: '#757575',
+    fontWeight: '400'
   },
   image: {
     width: 93,
@@ -281,6 +283,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#1E1E1E',
     marginLeft: 4,
+    fontWeight: '500'
   },
   button: {
     width: 304,
