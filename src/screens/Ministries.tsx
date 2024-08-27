@@ -15,76 +15,76 @@ function Ministries(props: Props) {
       </View>
 
       <View style={styles.content}>
-      <TouchableOpacity style={styles.button}>
-  
-        <Image style={[styles.buttonImagem, { width: 32, height: 26.7, resizeMode: 'contain' }]} 
-        source={require('../../assets/imosp_Korean.png')}
-        />
-        <View style={styles.textContainer}>
-        <Text style={styles.buttonTitle}> Coreano </Text>
-        <Text style={styles.buttonSubtitle}> Igreja Mãe. Cultos em coreano. </Text>
-        </View>
-        <Image style={styles.buttonSeta} 
-        source={require('../../assets/Chevron_right_Seta.png')}
-        />
-        
-      </TouchableOpacity> 
-
-      <TouchableOpacity style={styles.button}>
-        <Image style={[styles.buttonImagem, 
-        { width: 32, height: 26.7, resizeMode: 'contain'}]} 
-        source={require('../../assets/image_Geracoes.png')}
-        />
+        <TouchableOpacity style={styles.button}>
+    
+          <Image style={[styles.buttonImagem, { width: 32, height: 26.7, resizeMode: 'contain', marginRight:12 }]} 
+          source={require('../../assets/imosp_Korean.png')}
+          />
           <View style={styles.textContainer}>
-            <Text style={styles.buttonTitle}> Imosp Gerações </Text>
-            <Text style={styles.buttonSubtitle}> Cultos em português para a cultura coreana. </Text>
+          <Text style={styles.buttonTitle}>Coreano</Text>
+          <Text style={styles.buttonSubtitle}>Igreja Mãe. Cultos em coreano.</Text>
           </View>
-        <Image style={styles.buttonSeta} 
-      source={require('../../assets/Chevron_right_Seta.png')}
-        />
-      </TouchableOpacity> 
-
-      <TouchableOpacity style={styles.button}>
-        <Image style={[styles.buttonImagem, 
-          { width: 32, height: 26.7, resizeMode: 'contain' }]} 
-          source={require('../../assets/image_Nacoes.png')}
+          <Image style={styles.buttonSeta} 
+          source={require('../../assets/Chevron_right_Seta.png')}
           />
-        <View style={styles.textContainer}>
-          <Text style={styles.buttonTitle}> Imosp Nações </Text>
-          <Text style={styles.buttonSubtitle}> Cultos em português, ministério brasileiro da Imosp.</Text>
-        </View>
-        <Image style={styles.buttonSeta} 
-        source={require('../../assets/Chevron_right_Seta.png')}
-        />
-      </TouchableOpacity> 
+          
+        </TouchableOpacity> 
 
-      <TouchableOpacity style={styles.button}>
-        <Image style={[styles.buttonImagem, 
-          { width: 32, height: 26.7, resizeMode: 'contain' }]} 
-          source={require('../../assets/image_Hangul.png')}
+        <TouchableOpacity style={styles.button}>
+          <Image style={[styles.buttonImagem, 
+          { width: 32, height: 26.7, resizeMode: 'contain', marginRight:12}]} 
+          source={require('../../assets/image_Geracoes.png')}
           />
-        <View style={styles.textContainer}>
-          <Text style={styles.buttonTitle}> Hangul </Text>
-          <Text style={styles.buttonSubtitle}> Ensino do idioma coreano e compartilhamento da cultura. </Text>
-        </View>
-        <Image style={styles.buttonSeta} 
+            <View style={styles.textContainer}>
+              <Text style={styles.buttonTitle}>Imosp Gerações</Text>
+              <Text style={styles.buttonSubtitle}>Cultos em português para a cultura coreana.</Text>
+            </View>
+          <Image style={styles.buttonSeta} 
         source={require('../../assets/Chevron_right_Seta.png')}
-        />
-      </TouchableOpacity> 
+          />
+        </TouchableOpacity> 
 
-      <TouchableOpacity style={styles.button}>
-        <Image style={[styles.buttonImagem, 
-          { width: 32, height: 26.7, resizeMode: 'contain' }]} 
-          source={require('../../assets/image_Soma.png')}
-          /> 
-        <View style={styles.textContainer}>
-          <Text style={styles.buttonTitle}> Soma </Text>
-          <Text style={styles.buttonSubtitle}> Ministério dos jovens até 27 anos. </Text>
-        </View>
-        <Image style={styles.buttonSeta} 
-        source={require('../../assets/Chevron_right_Seta.png')}
-        />
-      </TouchableOpacity> 
+        <TouchableOpacity style={styles.button}>
+          <Image style={[styles.buttonImagem, 
+            { width: 32, height: 26.7, resizeMode: 'contain', marginRight:12 }]} 
+            source={require('../../assets/image_Nacoes.png')}
+            />
+          <View style={styles.textContainer}>
+            <Text style={styles.buttonTitle}>Imosp Nações </Text>
+            <Text style={styles.buttonSubtitle}>Cultos em português, ministério brasileiro da Imosp.</Text>
+          </View>
+          <Image style={styles.buttonSeta} 
+          source={require('../../assets/Chevron_right_Seta.png')}
+          />
+        </TouchableOpacity> 
+
+        <TouchableOpacity style={styles.button}>
+          <Image style={[styles.buttonImagem, 
+            { width: 32, height: 26.7, resizeMode: 'contain', marginRight:12 }]} 
+            source={require('../../assets/image_Hangul.png')}
+            />
+          <View style={styles.textContainer}>
+            <Text style={styles.buttonTitle}>Hangul</Text>
+            <Text style={styles.buttonSubtitle}>Ensino do idioma coreano e compartilhamento da cultura.</Text>
+          </View>
+          <Image style={styles.buttonSeta} 
+          source={require('../../assets/Chevron_right_Seta.png')}
+          />
+        </TouchableOpacity> 
+
+        <TouchableOpacity style={styles.button}>
+          <Image style={[styles.buttonImagem, 
+            { width: 32, height: 26.7, resizeMode: 'contain', marginRight:12 }]} 
+            source={require('../../assets/image_Soma.png')}
+            /> 
+          <View style={styles.textContainer}>
+            <Text style={styles.buttonTitle}>Soma</Text>
+            <Text style={styles.buttonSubtitle}>Ministério dos jovens até 27 anos.</Text>
+          </View>
+          <Image style={styles.buttonSeta} 
+          source={require('../../assets/Chevron_right_Seta.png')}
+          />
+        </TouchableOpacity> 
       </View>
 
     </SafeAreaView>
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: "center",
+    paddingTop: 25
   },
   title: {
     fontWeight: "600",
@@ -132,8 +132,7 @@ const styles = StyleSheet.create({
     height: 72,
   },
   textContainer: {
-    flex: 1,
-    marginLeft: 12,
+    flex: 1
   },
   buttonTitle: {
     fontWeight: 'bold',
@@ -154,6 +153,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     resizeMode: 'contain',
+    marginLeft: 10
   },
 
 });
