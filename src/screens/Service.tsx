@@ -28,7 +28,7 @@ function Service(props: Props) {
       </TouchableOpacity>
 
 
-      <TouchableOpacity style={styles.eventosButton}>
+      <TouchableOpacity style={styles.eventosButton} onPress={() => {props.navigation.navigate("Agenda");}}>
 
         <Text style={styles.smallButtonText2}>Eventos</Text>
 
@@ -43,11 +43,7 @@ function Service(props: Props) {
         <View style={{width: 304, height: 89, marginLeft: 8, alignItems: "center", justifyContent: "center" }}>
           <View style={{flexDirection: "row"}}>
 
-            <Image style={styles.image} source={require('../../assets/retirotabernaculo.png')}/>
-
-            <View style={styles.tagMint}>
-              <Text style={styles.tagText}>Culto único</Text>
-            </View>
+            <Image style={styles.image} source={require('../../assets/cultounico.png')}/>
 
             <View style={{marginLeft: 4}}>
             <Text style={styles.eventTitle}>Culto de aniversário</Text>
@@ -69,9 +65,17 @@ function Service(props: Props) {
 
               <View style={{flexDirection:"row", marginLeft: 8}}>
 
-              <Feather name="map-pin" size={15.88} color="black" />
+                <Feather name="clock" size={16} color="black" />
 
-              <Text style={styles.infoText}>Templo Maior</Text>
+                <Text style={styles.infoText}>10h</Text>
+
+              </View>
+
+              <View style={{flexDirection:"row", marginLeft: 8}}>
+
+                <Feather name="map-pin" size={15.88} color="black" />
+
+                <Text style={styles.infoText}>Templo Maior</Text>
 
               </View>
 
@@ -93,11 +97,7 @@ function Service(props: Props) {
         <View style={{width: 304, height: 89,  marginLeft:8, alignItems: "center", justifyContent: "center"}}>
           <View style={{flexDirection: "row"}}>
 
-            <Image style={styles.image} source={require('../../assets/oracaomadrugada.png')}/>
-
-            <View style={styles.tagPurple}>
-              <Text style={styles.tagText}>Culto Gerações</Text>
-            </View>
+            <Image style={styles.image} source={require('../../assets/cultogeracoes.png')}/>
 
             <View style={{marginLeft: 4}}>
             <Text style={styles.eventTitle}>Culto de domingo</Text>
@@ -115,6 +115,14 @@ function Service(props: Props) {
               <Feather name="calendar" size={16} color="black" />
 
               <Text style={styles.infoText}>14/07/24</Text>
+
+            </View>
+
+            <View style={{flexDirection:"row", marginLeft: 8}}>
+
+                <Feather name="clock" size={16} color="black" />
+
+                <Text style={styles.infoText}>11h</Text>
 
             </View>
 
@@ -147,12 +155,8 @@ function Service(props: Props) {
         <View style={{width: 304, height: 89,  marginLeft:8, alignItems: "center", justifyContent: "center"}}>
           <View style={{flexDirection: "row"}}>
 
-            <Image style={styles.image} source={require('../../assets/encontrodeoracaosemanal.png')}/>
-
-            <View style={styles.tagCyan}>
-              <Text style={styles.tagText}>Culto Nações</Text>
-            </View>
-
+            <Image style={styles.image} source={require('../../assets/cultounificado.png')}/>
+            
             <View style={{marginLeft: 4}}>
             <Text style={styles.eventTitle}>Culto de domingo</Text>
             <Text style={styles.description}>Celebração de ceia</Text>
@@ -236,7 +240,7 @@ description: {
   fontSize: 14,
   lineHeight: 16.8,
   width: 203,
-  height: 34,
+  height: 71,
   letterSpacing: 0.5,
   color: '#757575',
   fontWeight: '400'
