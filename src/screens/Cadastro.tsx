@@ -99,7 +99,7 @@ type Props = {
         marginTop: 20,
         borderRadius: 2,
         padding: 10,
-        borderWidth: 1,
+        borderWidth: 2,
         
     },
     inputP: {
@@ -111,7 +111,7 @@ type Props = {
         marginTop: 20,
         borderRadius: 2,
         padding: 10,
-        borderWidth: 1,
+        borderWidth: 2,
         
     },
     inputM: {
@@ -123,7 +123,7 @@ type Props = {
         marginTop: 20,
         borderRadius: 2,
         padding: 10,
-        borderWidth: 1,
+        borderWidth: 2,
     },
     titulo: {
         width: 197,
