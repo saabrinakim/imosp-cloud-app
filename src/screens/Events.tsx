@@ -18,11 +18,19 @@ function Events(props: Props) {
 
       <View
         style={{
-          marginVertical: 16,
+          width: 213,
+          height: 32,
+          marginTop: 16,
+          marginBottom: 16,
           flexDirection: "row",
         }}
       >
-        <TouchableOpacity style={styles.cultosButton}>
+        <TouchableOpacity
+          style={styles.cultosButton}
+          onPress={() => {
+            props.navigation.navigate("Service");
+          }}
+        >
           <Text style={styles.smallButtonText}>Cultos</Text>
         </TouchableOpacity>
 
